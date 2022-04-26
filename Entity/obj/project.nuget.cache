@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "FsIfQZ2jLWPZa4+4yL079RFfrEE6AENK9XYattBAHGZBpFbDeh1uTjfAc9PBMOZJygQclHkZbNJzYvnhklTUNg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SEBASTIAN\\Desktop\\Proyects\\ShiaProyect\\Shia\\Entity\\Entity.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SEBASTIAN\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
