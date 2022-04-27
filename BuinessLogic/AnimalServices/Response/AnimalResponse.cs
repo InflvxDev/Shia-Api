@@ -18,7 +18,7 @@ namespace BuinessLogic.AnimalServices.Response{
         {
             this.animal = animal;
             this.message = message;
-            this.error = true;
+            this.error = false;
         }
 
         public AnimalResponse(string message)

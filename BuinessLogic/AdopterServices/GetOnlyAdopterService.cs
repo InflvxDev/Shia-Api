@@ -1,0 +1,25 @@
+using BuinessLogic.AdopterServices.Response;
+using Data;
+
+namespace BuinessLogic.AdopterServices{
+    public class GetOnlyAdopterService{
+        private readonly DataContext _dataContext;
+
+        public GetOnlyAdopterService(DataContext dataContext){
+            _dataContext = dataContext;
+        }
+
+        public AdopterResponse GetOnlyAdopter(string identificationCard){
+            try{
+                var adopter = _dataContext.Adopters.Find(identificationCard);
+                if(adopter == null){
+                    return new AdopterResponse("Adopter not found");
+                }
+                return new AdopterResponse("Adopter getting successfully",adopter);
+            }catch(System.Exception){
+                return new AdopterResponse("Error getting adopter");
+                throw;
+            }
+        }
+    }
+}

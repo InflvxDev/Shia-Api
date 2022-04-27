@@ -21,7 +21,7 @@ namespace BuinessLogic.EmployeeServices {
                 employee.State = "Registered";
                 _dataContext.Employees.Add(employee);
                 _dataContext.SaveChanges();
-                return new EmployeeResponse("Employee added or updated successfully",employee);
+                return new EmployeeResponse("Employee added successfully",employee);
 
             }
             catch (System.Exception)

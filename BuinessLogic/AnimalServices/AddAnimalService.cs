@@ -20,7 +20,7 @@ namespace BuinessLogic.AnimalServices{
                 animal.State = "Registered";
                 _dataContext.Animals.Add(animal);
                 _dataContext.SaveChanges();
-                return new AnimalResponse("Animal added or updated successfully",animal);
+                return new AnimalResponse("Animal added successfully",animal);
             }
             catch (System.Exception)
             {

@@ -27,7 +27,7 @@ namespace BuinessLogic.AnimalServices{
                     _dataContext.Update(oldAnimal);
                     _dataContext.SaveChanges();
 
-                    return new AnimalResponse("Animal added or updated successfully", oldAnimal);
+                    return new AnimalResponse("Animal updated successfully", oldAnimal);
     
                 }
                 else{

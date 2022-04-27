@@ -26,7 +26,7 @@ namespace BuinessLogic.EmployeeService{
 
                     _context.Update(oldEmployee);
                     _context.SaveChanges();
-                    return new EmployeeResponse("Employee added or updated successfully",oldEmployee);
+                    return new EmployeeResponse("Employee updated successfully",oldEmployee);
                 }
                 else{
                     return new EmployeeResponse("Employee not found");

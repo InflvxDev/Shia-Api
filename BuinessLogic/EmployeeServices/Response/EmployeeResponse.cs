@@ -20,7 +20,7 @@ namespace BuinessLogic.EmployeeServices.Response
         {
             this.employee = employee;
             this.message = message;
-            error = true;
+            error = false;
         }
 
         public EmployeeResponse(string message)
