@@ -17,7 +17,7 @@ namespace BuinessLogic.AnimalServices{
                 if (animalSearch != null){
                     return new AnimalResponse("Animal already exists");
                 }
-
+                animal.State = "Registered";
                 _dataContext.Animals.Add(animal);
                 _dataContext.SaveChanges();
                 return new AnimalResponse("Animal added or updated successfully",animal);

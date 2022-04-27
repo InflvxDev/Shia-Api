@@ -19,7 +19,8 @@ namespace Data.Migrations
                     Type = table.Column<string>(type: "varchar(20)", nullable: false),
                     Breed = table.Column<string>(type: "varchar(20)", nullable: false),
                     Age = table.Column<int>(type: "int", nullable: false),
-                    Gender = table.Column<string>(type: "varchar(10)", nullable: false)
+                    Gender = table.Column<string>(type: "varchar(10)", nullable: false),
+                    State = table.Column<string>(type: "varchar(10)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -36,27 +37,12 @@ namespace Data.Migrations
                     Address = table.Column<string>(type: "varchar(35)", nullable: false),
                     Phone = table.Column<string>(type: "varchar(15)", nullable: false),
                     Email = table.Column<string>(type: "varchar(25)", nullable: false),
-                    Job = table.Column<string>(type: "varchar(20)", nullable: false)
+                    Job = table.Column<string>(type: "varchar(20)", nullable: false),
+                    State = table.Column<string>(type: "varchar(10)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Employees", x => x.IdentificationCard);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Enterprises",
-                columns: table => new
-                {
-                    Nit = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "varchar(20)", nullable: false),
-                    Email = table.Column<string>(type: "varchar(25)", nullable: false),
-                    Phone = table.Column<string>(type: "varchar(15)", nullable: false),
-                    Address = table.Column<string>(type: "varchar(35)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Enterprises", x => x.Nit);
                 });
         }
 
@@ -67,9 +53,6 @@ namespace Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Employees");
-
-            migrationBuilder.DropTable(
-                name: "Enterprises");
         }
     }
 }

@@ -18,6 +18,8 @@ namespace Entity
         public int Age { get; set; }
         [Column (TypeName = "varchar(10)")]
         public string Gender {get; set;}
+        [Column (TypeName = "varchar(10)")]
+        public string State { get; set; }
 
     }
 }

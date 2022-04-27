@@ -20,6 +20,8 @@ namespace Entity
         public string Email { get; set; }
         [Column (TypeName = "varchar(20)")]
         public string Job { get; set; }
+        [Column (TypeName = "varchar(10)")]
+        public string State { get; set; }
 
     }
 }

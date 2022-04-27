@@ -17,7 +17,8 @@ namespace BuinessLogic.EmployeeServices {
                 if(employeeSearch != null){
                     return new EmployeeResponse("Employee already exists");
                 }
-
+                
+                employee.State = "Registered";
                 _dataContext.Employees.Add(employee);
                 _dataContext.SaveChanges();
                 return new EmployeeResponse("Employee added or updated successfully",employee);

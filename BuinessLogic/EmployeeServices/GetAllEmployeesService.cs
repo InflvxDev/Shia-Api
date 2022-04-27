@@ -11,7 +11,7 @@ namespace BuinessLogic.EmployeeServices {
 
         public EmployeeResponse GetAllEmployees() {
             try {
-                var employees = _dataContext.Employees.ToList();
+                var employees = _dataContext.Employees.Where(e => e.State == "Registered").ToList();
                 return new EmployeeResponse(employees);
             } catch (System.Exception) {
                 return new EmployeeResponse("Error getting employees");

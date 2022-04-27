@@ -48,6 +48,10 @@ namespace Data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(25)");
 
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasColumnType("varchar(10)");
+
                     b.Property<string>("Type")
                         .IsRequired()
                         .HasColumnType("varchar(20)");
@@ -86,38 +90,13 @@ namespace Data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(15)");
 
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasColumnType("varchar(10)");
+
                     b.HasKey("IdentificationCard");
 
                     b.ToTable("Employees");
-                });
-
-            modelBuilder.Entity("Entity.Enterprise", b =>
-                {
-                    b.Property<int>("Nit")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Nit"), 1L, 1);
-
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasColumnType("varchar(35)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("varchar(25)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("varchar(20)");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasColumnType("varchar(15)");
-
-                    b.HasKey("Nit");
-
-                    b.ToTable("Enterprises");
                 });
 #pragma warning restore 612, 618
         }
