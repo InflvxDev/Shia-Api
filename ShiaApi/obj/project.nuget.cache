@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aYMZI+9Ko58fveob9cCOllAbv80osDWZ8MshgWiJtt2zRjcfahEGdAF4zSj6K593s8eBFSrWnegYnyQ6jzOXbA==",
+  "dgSpecHash": "GnHOI4VYemdm1w3JbE5M994opyPfQMzdBqqKYJKAcs+jjbt3ICNOBbnITqxuOwc0OTjriLIZ0jjIII8pd20ymQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SEBASTIAN\\Desktop\\Proyects\\ShiaProyect\\Shia\\ShiaApi\\ShiaApi.csproj",
+  "projectFilePath": "C:\\Users\\SEBASTIAN\\Desktop\\Proyects\\ShiaProyect\\Shia\\shiaapi\\ShiaApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SEBASTIAN\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\SEBASTIAN\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

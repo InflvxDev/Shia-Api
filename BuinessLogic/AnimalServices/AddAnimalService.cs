@@ -13,12 +13,12 @@ namespace BuinessLogic.AnimalServices{
         public AnimalResponse AddAnimal(Animal animal){
             try
             {
-                var animalSearch = _dataContext.Animals.Find(animal.AnimalID);
+                var animalSearch = _dataContext.Animal.Find(animal.AnimalID);
                 if (animalSearch != null){
                     return new AnimalResponse("Animal already exists");
                 }
                 animal.State = "Registered";
-                _dataContext.Animals.Add(animal);
+                _dataContext.Animal.Add(animal);
                 _dataContext.SaveChanges();
                 return new AnimalResponse("Animal added successfully",animal);
             }

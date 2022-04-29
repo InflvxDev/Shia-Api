@@ -12,13 +12,13 @@ namespace BuinessLogic.AdopterServices{
 
         public AdopterResponse AddAdopter(Adopter adopter){
             try{
-                var adopterSearch = _dataContext.Adopters.Find(adopter.IdentificationCard);
+                var adopterSearch = _dataContext.Adopter.Find(adopter.IdentificationCard);
                 if(adopterSearch != null){
                     return new AdopterResponse("Adopter already exists");
                 }
 
                 adopter.State = "Registered";
-                _dataContext.Adopters.Add(adopter);
+                _dataContext.Adopter.Add(adopter);
                 _dataContext.SaveChanges();
                 return new AdopterResponse("Adopter added uccessfully",adopter);
 

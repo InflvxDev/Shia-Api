@@ -16,14 +16,14 @@ namespace BuinessLogic.EmployeeServices
         {
             try
             {
-                var employee = _dataContext.Employees.Find(identificationCard);
+                var employee = _dataContext.Employee.Find(identificationCard);
                 if (employee == null)
                 {
                     return new EmployeeResponse("Employee not found");
                 }
                 
                 employee.State = "Deleted";
-                _dataContext.Employees.Update(employee);
+                _dataContext.Employee.Update(employee);
                 _dataContext.SaveChanges();
                 return new EmployeeResponse("Employee deleted successfully", employee);
             }

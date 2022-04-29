@@ -11,7 +11,7 @@ namespace BuinessLogic.ProductServices{
 
         public ProductResponse GetAllProducts(){
             try{
-                var products = _dataContext.Products.Where(p => p.State == "Registered").ToList();
+                var products = _dataContext.Product.Where(p => p.State == "Registered").ToList();
                 return new ProductResponse(products);
             }catch(System.Exception){
                 return new ProductResponse("Error getting products");

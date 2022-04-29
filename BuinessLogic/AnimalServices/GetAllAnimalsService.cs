@@ -12,7 +12,7 @@ namespace BuinessLogic.AnimalServices{
         public AnimalResponse GetAllAnimals(){
             try
             {
-                var animals = _dataContext.Animals.Where(a => a.State == "Registered").ToList();
+                var animals = _dataContext.Animal.Where(a => a.State == "Registered").ToList();
                 return new AnimalResponse(animals);
             }
             catch (System.Exception)

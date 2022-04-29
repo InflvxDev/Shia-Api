@@ -6,19 +6,19 @@ namespace Entity
     public class Adopter
     {
         [Key]
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string IdentificationCard { get; set; }
-        [Column(TypeName = "varchar(25)")]
+        [Column(TypeName = "nvarchar(25)")]
         public string Name { get; set; }
-        [Column(TypeName = "varchar(25)")]
+        [Column(TypeName = "nvarchar(25)")]
         public string LastName { get; set; }
-        [Column(TypeName = "varchar(35)")]
+        [Column(TypeName = "nvarchar(35)")]
         public string Address { get; set; }
-        [Column(TypeName = "varchar(15)")]
+        [Column(TypeName = "nvarchar(15)")]
         public string Phone { get; set; }
-        [Column(TypeName = "varchar(25)")]
+        [Column(TypeName = "nvarchar(25)")]
         public string Email { get; set; }
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string State { get; set; }
     }
 }

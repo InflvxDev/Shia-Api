@@ -12,7 +12,7 @@ namespace BuinessLogic.AdopterServices{
 
         public AdopterResponse UpdateAdopter(Adopter newAdopter){
             try{
-                var oldAdopter = _dataContext.Adopters.Find(newAdopter.IdentificationCard);
+                var oldAdopter = _dataContext.Adopter.Find(newAdopter.IdentificationCard);
                 if (oldAdopter != null){
 
                     oldAdopter.Name = newAdopter.Name;
@@ -23,7 +23,7 @@ namespace BuinessLogic.AdopterServices{
                     oldAdopter.Address = newAdopter.Address;
                     oldAdopter.State = newAdopter.State;
 
-                    _dataContext.Adopters.Update(oldAdopter);
+                    _dataContext.Adopter.Update(oldAdopter);
                     _dataContext.SaveChanges();
                     return new AdopterResponse("Adopter updated successfully",oldAdopter);
                 }

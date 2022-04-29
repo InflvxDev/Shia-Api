@@ -11,7 +11,7 @@ namespace BuinessLogic.AdopterServices{
 
         public AdopterResponse GetOnlyAdopter(string identificationCard){
             try{
-                var adopter = _dataContext.Adopters.Find(identificationCard);
+                var adopter = _dataContext.Adopter.Find(identificationCard);
                 if(adopter == null){
                     return new AdopterResponse("Adopter not found");
                 }

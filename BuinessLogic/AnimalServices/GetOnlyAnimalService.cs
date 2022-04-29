@@ -12,7 +12,7 @@ namespace BuinessLogic.AnimalServices{
         public AnimalResponse GetOnlyAnimal(int animalID){
             try
             {
-                var animal = _dataContext.Animals.Find(animalID);
+                var animal = _dataContext.Animal.Find(animalID);
                 if (animal == null){
                     return new AnimalResponse("Animal not found");
                 }

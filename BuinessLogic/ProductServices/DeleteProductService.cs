@@ -11,13 +11,13 @@ namespace BuinessLogic.ProductServices{
 
         public ProductResponse DeleteProduct(string productID){
             try{
-                var product = _dataContext.Products.Find(productID);
+                var product = _dataContext.Product.Find(productID);
                 if(product == null){
                     return new ProductResponse("Product not found");
                 }
 
                 product.State = "Deleted";
-                _dataContext.Products.Update(product);
+                _dataContext.Product.Update(product);
                 _dataContext.SaveChanges();
                 return new ProductResponse("Product deleted successfully",product);
 

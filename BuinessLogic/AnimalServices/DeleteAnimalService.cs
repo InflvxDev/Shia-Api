@@ -11,12 +11,12 @@ namespace BuinessLogic.AnimalServices{
 
         public AnimalResponse DeleteAnimal(string animalID){
             try {
-                var animal = _dataContext.Animals.Find(animalID);
+                var animal = _dataContext.Animal.Find(animalID);
                 if (animal == null) {
                     return new AnimalResponse("Animal not found");
                 }
                 animal.State = "Deleted";
-                _dataContext.Animals.Update(animal);
+                _dataContext.Animal.Update(animal);
                 _dataContext.SaveChanges();
                 return new AnimalResponse("Animal deleted successfully", animal);
             } catch (System.Exception) {

@@ -12,14 +12,14 @@ namespace BuinessLogic.ProductServices{
 
         public ProductResponse UpdateProduct(Product newProduct){
             try{
-                var oldProduct = _dataContext.Products.Find(newProduct.ProductID);
-                if(oldProduct != null){
+                var oldProduct = _dataContext.Product.Find(newProduct.ProductID);
+                if(oldProduct != null && oldProduct.State == "Registered"){
 
                     oldProduct.Description = newProduct.Description;
                     oldProduct.Price = newProduct.Price;
                     oldProduct.Stock = newProduct.Stock;
                     oldProduct.ProductID = newProduct.ProductID;
-                    oldProduct.State = newProduct.State;
+                    oldProduct.State =  "Registered";
 
                     _dataContext.Update(oldProduct);
                     _dataContext.SaveChanges();

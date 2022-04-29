@@ -13,7 +13,7 @@ namespace BuinessLogic.EmployeeService{
         public EmployeeResponse UpdateEmployee(Employee newEmployee){
             try
             {
-                var oldEmployee = _context.Employees.Find(newEmployee.IdentificationCard);
+                var oldEmployee = _context.Employee.Find(newEmployee.IdentificationCard);
                 if(oldEmployee != null){
 
                     oldEmployee.Name = newEmployee.Name;

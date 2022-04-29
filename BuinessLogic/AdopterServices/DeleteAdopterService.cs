@@ -11,13 +11,13 @@ namespace BuinessLogic.AdopterServices{
 
         public AdopterResponse DeleteAdopter(string identificationCard){
             try{
-                var adopter = _dataContext.Adopters.Find(identificationCard);
+                var adopter = _dataContext.Adopter.Find(identificationCard);
                 if(adopter == null){
                     return new AdopterResponse("Adopter not found");
                 }
 
                 adopter.State = "Deleted";
-                _dataContext.Adopters.Update(adopter);
+                _dataContext.Adopter.Update(adopter);
                 _dataContext.SaveChanges();
                 return new AdopterResponse("Adopter deleted successfully",adopter);
 

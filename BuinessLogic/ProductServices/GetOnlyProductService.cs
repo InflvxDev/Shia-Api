@@ -11,8 +11,8 @@ namespace BuinessLogic.ProductServices{
 
         public ProductResponse GetOnlyProduct(string productID){
             try{
-                var product = _dataContext.Products.Find(productID);
-                if(product == null){
+                var product = _dataContext.Product.Find(productID);
+                if(product == null || product.State == "Deleted"){
                     return new ProductResponse("Product not found");
                 }
                 return new ProductResponse("Product getting successfully",product);

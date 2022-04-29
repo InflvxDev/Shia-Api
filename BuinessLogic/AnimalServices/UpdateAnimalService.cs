@@ -13,7 +13,7 @@ namespace BuinessLogic.AnimalServices{
         public AnimalResponse UpdateAnimal(Animal newAnimal){
             try
             {
-                var oldAnimal = _dataContext.Animals.Find(newAnimal.AnimalID);
+                var oldAnimal = _dataContext.Animal.Find(newAnimal.AnimalID);
                 if(oldAnimal != null){
 
                     oldAnimal.Name = newAnimal.Name;

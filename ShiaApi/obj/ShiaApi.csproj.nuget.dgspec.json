@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SEBASTIAN\\Desktop\\Proyects\\ShiaProyect\\Shia\\ShiaApi\\ShiaApi.csproj": {}
+    "C:\\Users\\SEBASTIAN\\Desktop\\Proyects\\ShiaProyect\\Shia\\shiaapi\\ShiaApi.csproj": {}
   },
   "projects": {
     "C:\\Users\\SEBASTIAN\\Desktop\\Proyects\\ShiaProyect\\Shia\\BuinessLogic\\BuinessLogic.csproj": {
@@ -199,14 +199,14 @@
         }
       }
     },
-    "C:\\Users\\SEBASTIAN\\Desktop\\Proyects\\ShiaProyect\\Shia\\ShiaApi\\ShiaApi.csproj": {
+    "C:\\Users\\SEBASTIAN\\Desktop\\Proyects\\ShiaProyect\\Shia\\shiaapi\\ShiaApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SEBASTIAN\\Desktop\\Proyects\\ShiaProyect\\Shia\\ShiaApi\\ShiaApi.csproj",
+        "projectUniqueName": "C:\\Users\\SEBASTIAN\\Desktop\\Proyects\\ShiaProyect\\Shia\\shiaapi\\ShiaApi.csproj",
         "projectName": "ShiaApi",
-        "projectPath": "C:\\Users\\SEBASTIAN\\Desktop\\Proyects\\ShiaProyect\\Shia\\ShiaApi\\ShiaApi.csproj",
+        "projectPath": "C:\\Users\\SEBASTIAN\\Desktop\\Proyects\\ShiaProyect\\Shia\\shiaapi\\ShiaApi.csproj",
         "packagesPath": "C:\\Users\\SEBASTIAN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SEBASTIAN\\Desktop\\Proyects\\ShiaProyect\\Shia\\ShiaApi\\obj\\",
+        "outputPath": "C:\\Users\\SEBASTIAN\\Desktop\\Proyects\\ShiaProyect\\Shia\\shiaapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SEBASTIAN\\AppData\\Roaming\\NuGet\\NuGet.Config",

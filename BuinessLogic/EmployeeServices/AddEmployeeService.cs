@@ -13,13 +13,13 @@ namespace BuinessLogic.EmployeeServices {
         public EmployeeResponse AddEmployee(Employee employee){
             try
             {
-                var employeeSearch = _dataContext.Employees.Find(employee.IdentificationCard);
+                var employeeSearch = _dataContext.Employee.Find(employee.IdentificationCard);
                 if(employeeSearch != null){
                     return new EmployeeResponse("Employee already exists");
                 }
                 
                 employee.State = "Registered";
-                _dataContext.Employees.Add(employee);
+                _dataContext.Employee.Add(employee);
                 _dataContext.SaveChanges();
                 return new EmployeeResponse("Employee added successfully",employee);
 

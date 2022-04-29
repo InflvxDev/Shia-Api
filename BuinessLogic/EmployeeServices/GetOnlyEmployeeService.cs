@@ -11,7 +11,7 @@ namespace BuinessLogic.EmployeeServices{
 
         public EmployeeResponse GetOnlyEmployee(string identificationCard) {
             try {
-                var employee = _dataContext.Employees.Find(identificationCard);
+                var employee = _dataContext.Employee.Find(identificationCard);
                 if (employee == null) {
                     return new EmployeeResponse("Employee not found");
                 }

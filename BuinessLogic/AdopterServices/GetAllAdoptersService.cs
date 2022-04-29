@@ -11,7 +11,7 @@ namespace BuinessLogic.AdopterServices{
 
         public AdopterResponse GetAllAdopters(){
             try{
-                var adopters = _dataContext.Adopters.Where(a => a.State == "Registered").ToList();
+                var adopters = _dataContext.Adopter.Where(a => a.State == "Registered").ToList();
                 return new AdopterResponse(adopters);
             }catch(System.Exception){
                 return new AdopterResponse("Error getting adopters");
