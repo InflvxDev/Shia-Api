@@ -23,7 +23,7 @@ namespace BuinessLogic.ProductServices{
                         _dataContext.Update(productSearch);
                         _dataContext.SaveChanges();
 
-                        return new ProductResponse("Product add successfully", productSearch);
+                        return new ProductResponse("Product added successfully", productSearch);
                     }
                     return new ProductResponse("Product already exists");
                 }

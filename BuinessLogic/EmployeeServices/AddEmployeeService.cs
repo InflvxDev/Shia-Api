@@ -15,6 +15,21 @@ namespace BuinessLogic.EmployeeServices {
             {
                 var employeeSearch = _dataContext.Employee.Find(employee.IdentificationCard);
                 if(employeeSearch != null){
+                    if(employeeSearch.State == "Deleted"){
+
+                        employeeSearch.Name = employee.Name;
+                        employeeSearch.LastName = employee.LastName;
+                        employeeSearch.Phone = employee.Phone;
+                        employeeSearch.Email = employee.Email;
+                        employeeSearch.Address = employee.Address;
+                        employeeSearch.Job = employee.Job;
+                        employeeSearch.State = "Registered";
+
+                        _dataContext.Update(employeeSearch);
+                        _dataContext.SaveChanges();
+
+                        return new EmployeeResponse("Employee added successfully", employeeSearch);
+                    }
                     return new EmployeeResponse("Employee already exists");
                 }
                 

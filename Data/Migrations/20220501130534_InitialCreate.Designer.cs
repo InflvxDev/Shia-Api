@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220429184738_InitialCreate")]
+    [Migration("20220501130534_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -59,11 +59,8 @@ namespace Data.Migrations
 
             modelBuilder.Entity("Entity.Animal", b =>
                 {
-                    b.Property<int>("AnimalID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AnimalID"), 1L, 1);
+                    b.Property<string>("AnimalID")
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<int>("Age")
                         .HasColumnType("int");

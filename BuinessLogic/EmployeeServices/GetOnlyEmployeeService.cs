@@ -12,7 +12,7 @@ namespace BuinessLogic.EmployeeServices{
         public EmployeeResponse GetOnlyEmployee(string identificationCard) {
             try {
                 var employee = _dataContext.Employee.Find(identificationCard);
-                if (employee == null) {
+                if (employee == null || employee.State == "Deleted") {
                     return new EmployeeResponse("Employee not found");
                 }
                 return new EmployeeResponse("Employee getting successfully",employee);

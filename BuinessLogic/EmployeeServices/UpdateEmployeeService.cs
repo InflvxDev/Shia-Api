@@ -2,7 +2,7 @@ using BuinessLogic.EmployeeServices.Response;
 using Data;
 using Entity;
 
-namespace BuinessLogic.EmployeeService{
+namespace BuinessLogic.EmployeeServices{
     public class UpdateEmployeeService{
         private readonly DataContext _context;
 
@@ -14,7 +14,7 @@ namespace BuinessLogic.EmployeeService{
             try
             {
                 var oldEmployee = _context.Employee.Find(newEmployee.IdentificationCard);
-                if(oldEmployee != null){
+                if(oldEmployee != null && oldEmployee.State == "Registered"){
 
                     oldEmployee.Name = newEmployee.Name;
                     oldEmployee.LastName = newEmployee.LastName;

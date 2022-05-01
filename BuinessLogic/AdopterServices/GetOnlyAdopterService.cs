@@ -12,7 +12,7 @@ namespace BuinessLogic.AdopterServices{
         public AdopterResponse GetOnlyAdopter(string identificationCard){
             try{
                 var adopter = _dataContext.Adopter.Find(identificationCard);
-                if(adopter == null){
+                if(adopter == null || adopter.State == "Deleted"){
                     return new AdopterResponse("Adopter not found");
                 }
                 return new AdopterResponse("Adopter getting successfully",adopter);

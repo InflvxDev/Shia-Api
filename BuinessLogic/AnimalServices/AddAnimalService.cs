@@ -15,6 +15,20 @@ namespace BuinessLogic.AnimalServices{
             {
                 var animalSearch = _dataContext.Animal.Find(animal.AnimalID);
                 if (animalSearch != null){
+                    if (animalSearch.State == "Deleted"){
+
+                        animalSearch.Name = animal.Name;
+                        animalSearch.Age = animal.Age;
+                        animalSearch.Description = animal.Description;
+                        animalSearch.Breed = animal.Breed;
+                        animalSearch.Gender = animal.Gender;
+                        animalSearch.Type = animal.Type;
+                        animalSearch.State = "Registered";
+
+                        _dataContext.Update(animalSearch);
+                        _dataContext.SaveChanges();
+                        return new AnimalResponse("Animal added successfully", animalSearch);
+                    }   
                     return new AnimalResponse("Animal already exists");
                 }
                 animal.State = "Registered";

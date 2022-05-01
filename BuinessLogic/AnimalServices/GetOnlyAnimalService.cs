@@ -9,11 +9,11 @@ namespace BuinessLogic.AnimalServices{
             _dataContext = dataContext;
         }
 
-        public AnimalResponse GetOnlyAnimal(int animalID){
+        public AnimalResponse GetOnlyAnimal(string animalID){
             try
             {
                 var animal = _dataContext.Animal.Find(animalID);
-                if (animal == null){
+                if (animal == null || animal.State == "Deleted"){
                     return new AnimalResponse("Animal not found");
                 }
                 return new AnimalResponse("Animal getting successfully",animal);

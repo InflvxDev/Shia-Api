@@ -29,8 +29,7 @@ namespace Data.Migrations
                 name: "Animal",
                 columns: table => new
                 {
-                    AnimalID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    AnimalID = table.Column<string>(type: "nvarchar(15)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(25)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     Type = table.Column<string>(type: "nvarchar(20)", nullable: false),

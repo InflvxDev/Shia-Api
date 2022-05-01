@@ -14,7 +14,7 @@ namespace BuinessLogic.AnimalServices{
             try
             {
                 var oldAnimal = _dataContext.Animal.Find(newAnimal.AnimalID);
-                if(oldAnimal != null){
+                if(oldAnimal != null && oldAnimal.State == "Registered"){
 
                     oldAnimal.Name = newAnimal.Name;
                     oldAnimal.Age = newAnimal.Age;

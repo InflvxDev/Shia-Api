@@ -13,7 +13,7 @@ namespace BuinessLogic.AdopterServices{
         public AdopterResponse UpdateAdopter(Adopter newAdopter){
             try{
                 var oldAdopter = _dataContext.Adopter.Find(newAdopter.IdentificationCard);
-                if (oldAdopter != null){
+                if (oldAdopter != null && oldAdopter.State == "Registered"){
 
                     oldAdopter.Name = newAdopter.Name;
                     oldAdopter.LastName = newAdopter.LastName;

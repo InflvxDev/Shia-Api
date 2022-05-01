@@ -6,7 +6,8 @@ namespace Entity
     public class Animal
     {
         [Key]
-        public int AnimalID { get; set; }
+        [Column(TypeName = "nvarchar(15)")]
+        public string AnimalID { get; set; }
         [Column (TypeName = "nvarchar(25)")]
         public string Name { get; set; }
         [Column (TypeName = "nvarchar(100)")]

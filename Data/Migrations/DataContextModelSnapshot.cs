@@ -57,11 +57,8 @@ namespace Data.Migrations
 
             modelBuilder.Entity("Entity.Animal", b =>
                 {
-                    b.Property<int>("AnimalID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AnimalID"), 1L, 1);
+                    b.Property<string>("AnimalID")
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<int>("Age")
                         .HasColumnType("int");
